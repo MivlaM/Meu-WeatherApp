@@ -23,9 +23,11 @@ cityForm.addEventListener('submit', async event => {
   }
 
 
-  if (!isDayTime){
+  if (isDayTime){
+    timeImg.src = './src/day.svg'
     console.log('Tá de dia')
   } else {
+    timeImg.src = './src/night.svg'
     console.log('Tá de noite')
   }
 
