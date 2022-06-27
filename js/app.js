@@ -6,7 +6,7 @@ const cityTemperatureContainer = document.querySelector('[data-js="city-temperat
 const timeIconContainer = document.querySelector('[data-js="time-icon"]')
 
 const cityCard = document.querySelector('[data-js="city-card"]')
-const timeImg = document.querySelector('[data-js="time"]')
+const timeImage = document.querySelector('[data-js="time"]')
 
 const containerManipulation = (timeIcon, LocalizedName, WeatherText) => {
   timeIconContainer.innerHTML = timeIcon
@@ -30,9 +30,9 @@ cityForm.addEventListener('submit', async event => {
   }
   
   if (IsDayTime){
-    timeImg.src = './src/day.svg'
+    timeImage.src = './src/day.svg'
   } else {
-    timeImg.src = './src/night.svg'
+    timeImage.src = './src/night.svg'
   }
 
   containerManipulation(timeIcon, LocalizedName, WeatherText)
