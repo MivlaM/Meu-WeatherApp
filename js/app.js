@@ -14,6 +14,12 @@ const containerManipulation = (timeIcon, LocalizedName, WeatherText) => {
   cityWeatherContainer.textContent = WeatherText
 }
 
+const displayCityCard = (cityCardson) => {
+  if (cityCardson.classList.contains('d-none')) {
+    cityCardson.classList.remove('d-none')
+  }
+}
+
 cityForm.addEventListener('submit', async event => {
   event.preventDefault()
 
@@ -25,10 +31,8 @@ cityForm.addEventListener('submit', async event => {
 
   const timeIcon = `<img src="./src/icons/${WeatherIcon}.svg" />`
 
-  if (cityCard.classList.contains('d-none')){
-    cityCard.classList.remove('d-none')
-  }
-  
+  displayCityCard(cityCard)
+
   if (IsDayTime){
     timeImage.src = './src/day.svg'
   } else {
